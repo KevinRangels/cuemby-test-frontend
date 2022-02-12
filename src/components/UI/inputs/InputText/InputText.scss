@@ -1,0 +1,39 @@
+.inputText label {
+  font-size: 0.7rem;
+  transition: 0.7s ease all;
+}
+.inputText input {
+  background: #70707014;
+  border-radius: 10px;
+  height: 50px;
+  border: 1px solid transparent;
+  outline: none;
+  width: 100%;
+  padding: 0 30px;
+  font-size: 0.8rem;
+  transition: 0.7s ease all;
+}
+.inputTextHover input {
+  border: 1px solid $blue;
+  transition: 0.7s ease all;
+}
+.inputTextHover input::placeholder {
+  color: $blue;
+  transition: 0.7s ease all;
+}
+.inputTextHover label {
+  color: $blue;
+  transition: 0.7s ease all;
+}
+.inputTextFocus input {
+  border: 1.5px solid $green;
+  transition: 0.7s ease all;
+}
+.inputTextFocus input::placeholder {
+  color: $green;
+  transition: 0.7s ease all;
+}
+.inputTextFocus label {
+  color: $green;
+  transition: 0.7s ease all;
+}

@@ -1,0 +1,32 @@
+.loginForm {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loginForm__title {
+  text-align: left;
+  width: 75%;
+}
+.loginForm__title h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.loginForm form {
+  width: 80%;
+}
+.loginForm__forget {
+  margin-top: 50px;
+}
+.loginForm__forget span {
+  text-decoration: none;
+  color: $green;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .loginForm {
+    width: 100%;
+  }
+}

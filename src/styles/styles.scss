@@ -1,3 +1,10 @@
-@import "./base/settings";
-@import "./base/base";
+@import './base/settings';
+@import './base/base';
+@import './components/buttons';
 
+// Pages
+@import '../pages/Auth/LoginScreen/LoginScreen.scss';
+@import '../components/UI/inputs/InputText/InputText.scss';
+
+//Components
+@import '../components/auth/LoginForm/LoginForm.scss';
