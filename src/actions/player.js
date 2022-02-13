@@ -10,7 +10,7 @@ export const getPlayers = (page = 1) => {
       let res = await axios.get(
         `/players?page=${page}&country=${filter?.country ? filter.country : ''}&search=${filter?.search ? filter.search : ''}&league=${filter?.league ? filter.league : ''}`,
       );
-      console.log(res);
+      dispatch(startLoading(false));
       dispatch(setAllPlayers(res.data.players));
     } catch (e) {
       dispatch(startLoading(false));
@@ -23,6 +23,10 @@ export const getPlayers = (page = 1) => {
 
 export const setAllPlayers = (state) => ({
   type: types.playersGetAll,
+  payload: state,
+});
+export const setPlayer = (state) => ({
+  type: types.playerGetActive,
   payload: state,
 });
 

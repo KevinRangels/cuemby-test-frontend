@@ -10,6 +10,7 @@ import { getPlayers, setFilterPlayers } from '../../../actions/player';
 
 export const PlayersScreen = () => {
   const dispatch = useDispatch();
+  const { loading } = useSelector((state) => state.ui);
   const { countries } = useSelector((state) => state.countries);
   const { leagues } = useSelector((state) => state.leagues);
   const { players, filter } = useSelector((state) => state.players);
@@ -70,11 +71,22 @@ export const PlayersScreen = () => {
       <div className="playerScreen__list">
         <div className="row">
           {players &&
+            !loading &&
             players.docs.map((e) => (
               <div className="col-md-3 mb-4">
                 <PlayerCard data={e} />
               </div>
             ))}
+          {loading && (
+            <div className="w-100 d-flex justify-content-center mt-3">
+              <i class="spinnerLoading  fas fa-spinner fa-spin"></i>
+            </div>
+          )}
+          {players && !loading && players.docs.length === 0 && (
+            <div className="w-100 d-flex justify-content-center mt-3">
+              <p>No se encontraron resultados</p>
+            </div>
+          )}
         </div>
       </div>
       <div className="row">

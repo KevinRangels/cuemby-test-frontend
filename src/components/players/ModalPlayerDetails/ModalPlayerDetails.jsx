@@ -7,6 +7,7 @@ import imagePlyer from '../../../assets/images/players/haland.png';
 export const ModalPlayerDetails = () => {
   const dispatch = useDispatch();
   const { showModalPlayer } = useSelector((state) => state.ui);
+  const { player } = useSelector((state) => state.players);
 
   return (
     <Modal show={showModalPlayer} size="lg" onHide={() => dispatch(showModalPlayerDetails(false))} aria-labelledby="contained-modal-title-vcenter" centered>
@@ -28,35 +29,37 @@ export const ModalPlayerDetails = () => {
           <div className="col-md-6">
             <div className="modalPlayerDetails__header">
               <h3>
-                Kevin Rangel <span>(Venezuela)</span>
+                {player.name} <span>({player.country.name})</span>
               </h3>
-              <span>Real Madrid - Liga santander</span>
+              <span>
+                {player.team.name} - {player.league.name}
+              </span>
             </div>
             <hr />
             <div className="row modalPlayerDetails__body">
               <div className="col-md-6">
                 <p>
-                  Posición: <span>tal</span>
+                  Posición: <span>{player.position}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Edad: <span>tal</span>
+                  Edad: <span>{player.age}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Pie: <span>tal</span>
+                  Pie: <span>{player.foot}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Alto: <span>45CM</span>
+                  Alto: <span>{player.height}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Peso: <span>80 KG</span>
+                  Peso: <span>{player.weight} KG</span>
                 </p>
               </div>
             </div>
