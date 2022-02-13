@@ -1,0 +1,17 @@
+[
+  {
+    "route": "/user/dashboard",
+    "icon": "fas fa-home",
+    "name": "Dashboard"
+  },
+  {
+    "route": "/user/players",
+    "icon": "fas fa-users",
+    "name": "Jugadores"
+  },
+  {
+    "route": "/user/teams",
+    "icon": "fas fa-futbol",
+    "name": "Equipos"
+  }
+]

@@ -1,29 +1,32 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Footer } from '../components/UI/Footer';
-import { Header } from '../components/UI/Header/Header';
-
-import { DashboardScreen } from '../pages/User/DashboardScreen';
+import { HeaderMovil } from '../components/UI/HeaderMovil/HeaderMovil';
+import { Sidebar } from '../components/UI/Sidebar/Sidebar';
+import { DashboardScreen } from '../pages/User/Dashboard/DashboardScreen';
+import routesUser from './routesUser.json';
 
 export const PrivateRoute = () => {
   return (
     <>
-      <Header />
-      <div class="wrapper">
-        <div class="">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-4">{/* <MenuAccount /> */}</div>
-              <div class="col-lg-9 col-md-8">
-                <Switch>
-                  <Route path="/user/dashboard" component={DashboardScreen} />
-                </Switch>
-              </div>
-            </div>
-          </div>
+      <HeaderMovil />
+      <div className="privatePages">
+        <div className="privatePages__sidebar">
+          <Sidebar routes={routesUser} />
         </div>
+        <div className="privatePages__main">
+          {/* <div className="privatePages__search">
+            <InputSearch />
+          </div> */}
+          <Switch>
+            <Route path="/user/dashboard" component={DashboardScreen} />
+            {/* <Route path="/user/players" component={ResultsScreen} /> */}
+            {/* <Route path="/user/teams" component={ExamsScreenAdmin} /> */}
+          </Switch>
+        </div>
+        {/* <div className="privatePages__aside">
+          <Aside />
+        </div> */}
       </div>
-      <Footer />
     </>
   );
 };

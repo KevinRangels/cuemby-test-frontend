@@ -1,0 +1,27 @@
+.headerMovil {
+  height: 60px;
+  background: $blue;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+@media (max-width: 576px) {
+  .headerMovil {
+    display: flex;
+  }
+  .headerMovil__img {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .headerMovil i {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

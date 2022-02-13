@@ -1,10 +1,16 @@
 @import './base/settings';
 @import './base/base';
-@import './components/buttons';
+@import './base/privatePages';
 
 // Pages
 @import '../pages/Auth/LoginScreen/LoginScreen.scss';
-@import '../components/UI/inputs/InputText/InputText.scss';
+@import '../pages/User/Dashboard/DashboardAdmin.scss';
 
 //Components
+@import './components/buttons';
+@import '../components/UI/HeaderMovil/HeaderMovil.scss';
 @import '../components/auth/LoginForm/LoginForm.scss';
+
+//UI
+@import '../components/UI/Sidebar/Sidebar.scss';
+@import '../components/UI/inputs/InputText/InputText.scss';

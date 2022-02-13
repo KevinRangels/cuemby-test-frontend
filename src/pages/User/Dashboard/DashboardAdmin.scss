@@ -1,0 +1,39 @@
+.dashboardAdmin {
+  width: 100%;
+}
+.dashboardAdmin__panel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  height: 100%;
+}
+.dashboardAdmin__panelHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboardAdmin__panelHeader i {
+  font-size: 1.2rem;
+  color: $blue;
+}
+.dashboardAdmin__panelHeader span {
+  color: $green;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dashboardAdmin__panel p {
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 18px;
+}
+.dashboardAdmin__panel button {
+  outline: none;
+  background: #2dc84d;
+  height: 30px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0 8px;
+  font-size: 0.7rem;
+}
