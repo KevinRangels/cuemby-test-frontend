@@ -1,0 +1,45 @@
+.modalPlayerDetails__header h3 {
+  color: $blue;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.modalPlayerDetails__header h3 span {
+  font-weight: normal;
+  color: #929191;
+  font-size: 0.9rem;
+}
+.modalPlayerDetails__header span {
+  color: #929191;
+}
+
+.modalPlayerDetails__body p {
+  color: #706f6f;
+}
+.modalPlayerDetails__body p span {
+  color: $blue;
+  font-weight: bold;
+}
+.modalPlayerDetails__btnClose {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: $blue;
+  background: #fff;
+  border-radius: 100%;
+  font-size: 1rem;
+  left: 10px;
+  border-color: $blue;
+  transition: 1s ease all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+.modalPlayerDetails__btnClose:hover {
+  position: absolute;
+  color: #fff;
+  border-color: $blue;
+  background: $blue;
+  transition: 1s ease all;
+}

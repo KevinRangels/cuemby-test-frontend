@@ -13,7 +13,7 @@ export const PlayersScreen = () => {
   };
   return (
     <div className="playerScreen w-100">
-      <div className="playerScreen d-flex align-items-center mb-4">
+      <div className="playerScreen d-flex align-items-center mb-4 mt-2 mt-md-0">
         {/* <i class="fas fa-folder-plus"></i> */}
         <h3>Jugadores</h3>
       </div>

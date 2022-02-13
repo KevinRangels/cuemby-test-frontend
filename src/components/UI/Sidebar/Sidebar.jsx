@@ -22,7 +22,9 @@ export const Sidebar = ({ routes }) => {
   return (
     <navbar className="sidebar" id="sidebar">
       <div className="sidebar__top">
-        <div className="sidebar__img">{/* <img src={Logo} alt="Biovet" className="img-fluid" /> */}</div>
+        <div className="sidebar__img">
+          <img src="https://cuemby.com/wp-content/uploads/2020/05/cuemby-logo-white-retine.png" alt="Biovet" className="img-fluid" />
+        </div>
         <div className="sidebar__menu">
           <ul>
             {routes.map((e) => (

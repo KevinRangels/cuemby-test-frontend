@@ -6,7 +6,7 @@ import { Pagination } from '../../../components/UI/Pagination/Pagination';
 export const TeamsScreen = () => {
   return (
     <div>
-      <div className="playerScreen d-flex align-items-center mb-4">
+      <div className="playerScreen d-flex align-items-center mb-4 mb-4 mt-2 mt-md-0">
         <h3>Equipos</h3>
       </div>
       <div className="row mb-3">

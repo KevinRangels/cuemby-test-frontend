@@ -9,9 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20%;
+  padding: 10px 20%;
   margin-top: 30px;
   margin-bottom: 50px;
+  background: $blue;
 }
 .sidebar__menu ul {
   list-style: none;

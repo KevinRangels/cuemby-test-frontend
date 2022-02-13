@@ -8,7 +8,9 @@ export const HeaderMovil = () => {
 
   return (
     <header className="headerMovil">
-      <div className="headerMovil__img">{/* <img src={logoWhite} alt="" className="img-fluid" /> */}</div>
+      <div className="headerMovil__img">
+        <img src="https://cuemby.com/wp-content/uploads/2020/05/cuemby-logo-white-retine.png" alt="" className="img-fluid" />
+      </div>
       <i className="fas fa-bars" onClick={handleOpenMenu}></i>
     </header>
   );

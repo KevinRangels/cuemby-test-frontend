@@ -1,7 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { showModalPlayerDetails } from '../../../actions/ui';
 import imagePlyer from '../../../assets/images/players/haland.png';
 
 export const PlayerCard = () => {
+  const dispatch = useDispatch();
+
+  const handleViewDetails = () => {
+    dispatch(showModalPlayerDetails(true));
+  };
   return (
     <div className="playerCard p-2">
       <div
@@ -13,7 +20,7 @@ export const PlayerCard = () => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <button>+</button>
+        <button onClick={handleViewDetails}>+</button>
       </div>
       <div className="playerCard_body">
         <div className="playerCard_name">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { ModalPlayerDetails } from '../components/players/ModalPlayerDetails/ModalPlayerDetails';
 import { HeaderMovil } from '../components/UI/HeaderMovil/HeaderMovil';
 import { Sidebar } from '../components/UI/Sidebar/Sidebar';
 import { DashboardScreen } from '../pages/User/Dashboard/DashboardScreen';
@@ -28,6 +29,7 @@ export const PrivateRoute = () => {
         {/* <div className="privatePages__aside">
           <Aside />
         </div> */}
+        <ModalPlayerDetails />
       </div>
     </>
   );
