@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { HeaderMovil } from '../components/UI/HeaderMovil/HeaderMovil';
 import { Sidebar } from '../components/UI/Sidebar/Sidebar';
 import { DashboardScreen } from '../pages/User/Dashboard/DashboardScreen';
+import { PlayersScreen } from '../pages/User/Players/PlayersScreen';
 import routesUser from './routesUser.json';
 
 export const PrivateRoute = () => {
@@ -19,7 +20,7 @@ export const PrivateRoute = () => {
           </div> */}
           <Switch>
             <Route path="/user/dashboard" component={DashboardScreen} />
-            {/* <Route path="/user/players" component={ResultsScreen} /> */}
+            <Route path="/user/players" component={PlayersScreen} />
             {/* <Route path="/user/teams" component={ExamsScreenAdmin} /> */}
           </Switch>
         </div>

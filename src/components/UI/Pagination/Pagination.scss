@@ -1,0 +1,28 @@
+.pagination {
+  width: 100%;
+}
+.pagination ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pagination ul li {
+  display: flex;
+  list-style: none;
+  margin-right: 4px;
+}
+.pagination ul li span {
+  color: $blue;
+}
+.pagination ul li button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  outline: none;
+  font-size: 0.8rem;
+  color: $blue;
+}
+.pagination__btnDisabled {
+  color: #8695a0 !important;
+}

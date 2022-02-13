@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-export const InputSearch = () => {
+export const InputSearch = ({ placeholder = '', label = '', icon = false }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const [value, setValue] = useState('');
@@ -37,12 +37,17 @@ export const InputSearch = () => {
   // }, [searchPatients]);
 
   return (
-    <div className="inputSearch">
-      <input type="text" placeholder="Escriba el nombre del paciente para buscar resultado" onChange={handleInputChange} />
-      {/* {loadingSearch && <i class="spinnerLoading  fas fa-spinner fa-spin"></i>} */}
-      <div className="inputSearch__icon">
-        <i className="fas fa-search"></i>
+    <>
+      <span>{label}</span>
+      <div className="inputSearch">
+        <input type="text" placeholder={placeholder} onChange={handleInputChange} />
+        {/* {loadingSearch && <i class="spinnerLoading  fas fa-spinner fa-spin"></i>} */}
+        {icon && (
+          <div className="inputSearch__icon">
+            <i className="fas fa-search"></i>
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 };
