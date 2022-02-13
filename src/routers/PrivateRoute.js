@@ -4,6 +4,7 @@ import { HeaderMovil } from '../components/UI/HeaderMovil/HeaderMovil';
 import { Sidebar } from '../components/UI/Sidebar/Sidebar';
 import { DashboardScreen } from '../pages/User/Dashboard/DashboardScreen';
 import { PlayersScreen } from '../pages/User/Players/PlayersScreen';
+import { TeamsScreen } from '../pages/User/Teams/TeamsScreen';
 import routesUser from './routesUser.json';
 
 export const PrivateRoute = () => {
@@ -21,7 +22,7 @@ export const PrivateRoute = () => {
           <Switch>
             <Route path="/user/dashboard" component={DashboardScreen} />
             <Route path="/user/players" component={PlayersScreen} />
-            {/* <Route path="/user/teams" component={ExamsScreenAdmin} /> */}
+            <Route path="/user/teams" component={TeamsScreen} />
           </Switch>
         </div>
         {/* <div className="privatePages__aside">

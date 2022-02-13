@@ -12,7 +12,9 @@ export const PlayerCard = () => {
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
         }}
-      ></div>
+      >
+        <button>+</button>
+      </div>
       <div className="playerCard_body">
         <div className="playerCard_name">
           <h3>Kevin Rangel</h3>

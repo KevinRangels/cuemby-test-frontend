@@ -6,6 +6,9 @@ export const DashboardScreen = () => {
 
   return (
     <div className="dashboardAdmin">
+      <div className="playerScreen d-flex align-items-center mb-4">
+        <h3>Dashboard</h3>
+      </div>
       <div className="row">
         <div className="col-md-4 mb-4 mb-md-0">
           <div className="dashboardAdmin__panel">
