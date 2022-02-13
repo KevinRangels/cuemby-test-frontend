@@ -4,8 +4,14 @@
 .btn-primary:hover {
   background: $blue;
 }
+.btn-primary:active {
+  background: $blue !important;
+}
+.btn-primary:visited {
+  background: $blue !important;
+}
 .btn-primary:focus {
-  background: $blue;
+  background: $blue !important;
 }
 .btn__login {
   outline: none;
