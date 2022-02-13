@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { showModalPlayerDetails } from '../../../actions/ui';
 import imagePlyer from '../../../assets/images/players/haland.png';
 
-export const PlayerCard = () => {
+export const PlayerCard = ({ data }) => {
   const dispatch = useDispatch();
 
   const handleViewDetails = () => {
@@ -24,30 +24,30 @@ export const PlayerCard = () => {
       </div>
       <div className="playerCard_body">
         <div className="playerCard_name">
-          <h3>Kevin Rangel</h3>
+          <h3>{data.name}</h3>
         </div>
         <div className="playerCard_info mt-2">
           <div className="row">
             <div className="col-6">
               <p>
-                País: <br /> <span>Venzeula</span>{' '}
+                País: <br /> <span>{data.country.name}</span>{' '}
               </p>
             </div>
             <div className="col-6">
               <p>
-                Posición: <br /> <span>Tal</span>{' '}
+                Posición: <br /> <span>{data.position}</span>{' '}
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col-6">
               <p>
-                Equipo: <br /> <span>Estudiantes</span>{' '}
+                Equipo: <br /> <span>{data.team.name}</span>{' '}
               </p>
             </div>
             <div className="col-6">
               <p>
-                Liga: <br /> <span>Tal</span>{' '}
+                Liga: <br /> <span>{data.league.name}</span>{' '}
               </p>
             </div>
           </div>

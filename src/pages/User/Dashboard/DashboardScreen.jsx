@@ -28,7 +28,7 @@ export const DashboardScreen = () => {
             <p className="mb-0">Jugadores</p>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mb-4 mb-md-0">
           <div className="dashboardAdmin__panel">
             <div className="dashboardAdmin__panelHeader mb-2">
               <i className="fas fa-poll-h"></i>

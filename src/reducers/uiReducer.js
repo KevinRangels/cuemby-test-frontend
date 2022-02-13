@@ -4,7 +4,6 @@ const initialState = {
   showModalChargeDB: false,
   showModalPlayer: false,
   loading: false,
-  msgError: null,
 };
 
 export const uiReducer = (state = initialState, action) => {
@@ -18,6 +17,11 @@ export const uiReducer = (state = initialState, action) => {
       return {
         ...state,
         showModalPlayer: action.payload,
+      };
+    case types.uiStartLoading:
+      return {
+        ...state,
+        loading: action.payload,
       };
     default:
       return state;

@@ -13,11 +13,7 @@ export const Pagination = ({ data, setPage, page }) => {
     <div className="pagination">
       <ul>
         <li>
-          <button
-            disabled={data?.page === 1}
-            onClick={() => handleBackPage(data.page)}
-            className={`${data?.page === 1 && 'pagination__btnDisabled'}`}
-          >
+          <button disabled={data?.page === 1} onClick={() => handleBackPage(data.page)} className={`${data?.page === 1 && 'pagination__btnDisabled'}`}>
             Anterior
           </button>
         </li>

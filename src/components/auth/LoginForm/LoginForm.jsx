@@ -4,15 +4,15 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-// import { authLogin } from '../../../actions/auth';
 import { useHistory } from 'react-router-dom';
+import { authLogin } from '../../../actions/auth';
 
 const schema = yup.object().shape({
   email: yup.string().required('Campo requerido').email('Correo electrónico inválido'),
   password: yup.string().required('Campo requerido').min(6, 'Debe tener mínimo 6 caracteres'),
 });
 
-export const LoginForm = ({ setView }) => {
+export const LoginForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { loading } = useSelector((state) => state.ui);
@@ -25,23 +25,12 @@ export const LoginForm = ({ setView }) => {
     resolver: yupResolver(schema),
   });
 
-  const handleViewForm = (form) => {
-    setView(form);
-  };
-
   const onSubmit = (data) => {
-    // dispatch(authLogin(data)).then((e) => {
-    //   if (e.ok) {
-    //     if (e.rol === 'USER_ROLE') {
-    //       history.push('/user/dashboard');
-    //       return;
-    //     }
-    //     if (e.rol === 'ADMIN_ROLE') {
-    //       history.push('/admin/dashboard');
-    //       return;
-    //     }
-    //   }
-    // });
+    dispatch(authLogin(data)).then((e) => {
+      if (e) {
+        history.push('/user/dashboard');
+      }
+    });
   };
   return (
     <div className="loginForm">
