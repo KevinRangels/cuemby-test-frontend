@@ -29,37 +29,37 @@ export const ModalPlayerDetails = () => {
           <div className="col-md-6">
             <div className="modalPlayerDetails__header">
               <h3>
-                {player.name} <span>({player.country.name})</span>
+                {player?.name} <span>({player?.country.name})</span>
               </h3>
               <span>
-                {player.team.name} - {player.league.name}
+                {player?.team.name} - {player?.league.name}
               </span>
             </div>
             <hr />
             <div className="row modalPlayerDetails__body">
               <div className="col-md-6">
                 <p>
-                  Posición: <span>{player.position}</span>
+                  Posición: <span>{player?.position}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Edad: <span>{player.age}</span>
+                  Edad: <span>{player?.age}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Pie: <span>{player.foot}</span>
+                  Pie: <span>{player?.foot}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Alto: <span>{player.height}</span>
+                  Alto: <span>{player?.height}</span>
                 </p>
               </div>
               <div className="col-md-6">
                 <p>
-                  Peso: <span>{player.weight} KG</span>
+                  Peso: <span>{player?.weight} KG</span>
                 </p>
               </div>
             </div>

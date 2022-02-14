@@ -1,13 +1,14 @@
 import { types } from '../types/types';
 
 const initialState = {
-  players: false,
-  player: false,
+  players: null,
+  player: null,
   filter: {
     search: '',
     country: null,
     league: null,
   },
+  playersTeam: null,
 };
 
 export const playersReducer = (state = initialState, action) => {
@@ -26,6 +27,11 @@ export const playersReducer = (state = initialState, action) => {
       return {
         ...state,
         filter: action.payload,
+      };
+    case types.playerTeamGetAll:
+      return {
+        ...state,
+        playersTeam: action.payload,
       };
     default:
       return state;

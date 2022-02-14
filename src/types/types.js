@@ -9,6 +9,7 @@ export const types = {
   playersGetAll: '[Players] Get all',
   playerGetActive: '[Players] Get Single',
   playerSetFilter: '[Players] Set Filter',
+  playerTeamGetAll: '[Players] Get All Team Players',
 
   countryGetAll: '[Countries] Get all',
 

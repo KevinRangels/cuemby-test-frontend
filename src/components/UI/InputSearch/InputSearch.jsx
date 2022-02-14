@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPlayers, setFilterPlayers } from '../../../actions/player';
 
-export const InputSearch = ({ placeholder = '', label = '', icon = false, change = null, page = null }) => {
+export const InputSearch = ({ placeholder = '', label = '', icon = false, page = null }) => {
   const dispatch = useDispatch();
   const { filter } = useSelector((state) => state.players);
   const [value, setValue] = useState('');
@@ -31,7 +31,7 @@ export const InputSearch = ({ placeholder = '', label = '', icon = false, change
 
   return (
     <>
-      <span>{label}</span>
+      <span className="inputSearch__label">{label}</span>
       <div className="inputSearch">
         <input type="text" placeholder={placeholder} onChange={handleInputChange} />
         {icon && (

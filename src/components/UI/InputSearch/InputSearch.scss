@@ -9,6 +9,10 @@
   position: relative;
   border: 1px solid silver;
 }
+.inputSearch__label {
+  font-size: 0.8rem;
+  color: $blue;
+}
 .inputSearch input {
   background: none;
   border: none;

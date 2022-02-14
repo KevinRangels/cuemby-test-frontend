@@ -89,9 +89,11 @@ export const PlayersScreen = () => {
           )}
         </div>
       </div>
-      <div className="row">
-        <Pagination setPage={setPage} page={page} data={players} />
-      </div>
+      {players?.totalPages !== 1 && (
+        <div className="row">
+          <Pagination setPage={setPage} page={page} data={players} />
+        </div>
+      )}
     </div>
   );
 };
