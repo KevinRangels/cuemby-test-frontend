@@ -1,10 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { getDataDashboard } from '../../../actions/settings';
 import { showModalChargeDBSet } from '../../../actions/ui';
 import { ModalChargeDB } from '../../../components/dashboard/ModalChargeDB/ModalChargeDB';
 
 export const DashboardScreen = () => {
   const dispatch = useDispatch();
+  const { dashboard } = useSelector((state) => state.settings);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    dispatch(getDataDashboard());
+  }, []);
 
   return (
     <div className="dashboardAdmin">
@@ -23,7 +30,7 @@ export const DashboardScreen = () => {
           <div className="dashboardAdmin__panel">
             <div className="dashboardAdmin__panelHeader mb-2">
               <i className="fas fa-users"></i>
-              <span>11</span>
+              <span>{dashboard && dashboard.totalPlayers}</span>
             </div>
             <p className="mb-0">Jugadores</p>
           </div>
@@ -32,7 +39,7 @@ export const DashboardScreen = () => {
           <div className="dashboardAdmin__panel">
             <div className="dashboardAdmin__panelHeader mb-2">
               <i className="fas fa-poll-h"></i>
-              <span>12</span>
+              <span>{dashboard && dashboard.totalTeams}</span>
             </div>
             <p className="mb-0">Equipos</p>
           </div>
@@ -41,7 +48,7 @@ export const DashboardScreen = () => {
           <div className="dashboardAdmin__panel">
             <div className="dashboardAdmin__panelHeader mb-2">
               <i className="fas fa-poll-h"></i>
-              <span>12</span>
+              <span>{dashboard && dashboard.totalLeagues}</span>
             </div>
             <p className="mb-0">Ligas</p>
           </div>

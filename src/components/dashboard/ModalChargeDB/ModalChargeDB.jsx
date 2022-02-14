@@ -4,10 +4,11 @@ import { toast, Slide } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { showModalChargeDBSet } from '../../../actions/ui';
 import { handleToastConfig } from '../../../helpers/toastConfig';
+import { rechargueDBWithApi } from '../../../actions/settings';
 
 export const ModalChargeDB = () => {
   const dispatch = useDispatch();
-  const { showModalChargeDB } = useSelector((state) => state.ui);
+  const { showModalChargeDB, loading } = useSelector((state) => state.ui);
 
   const [value, setValue] = useState('');
 
@@ -25,9 +26,10 @@ export const ModalChargeDB = () => {
       toast.warn('Ingresa una cantidad menor o igual a 20', handleToastConfig(Slide, 10000));
       return;
     }
+    dispatch(rechargueDBWithApi(value));
   };
   return (
-    <Modal show={showModalChargeDB} onHide={() => dispatch(showModalChargeDBSet(false))} aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal show={showModalChargeDB} aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Body>
         <div className="text-end">
           <div
@@ -36,7 +38,7 @@ export const ModalChargeDB = () => {
               cursor: 'pointer',
             }}
           >
-            <i className="fas fa-times" onClick={() => dispatch(showModalChargeDBSet(false))}></i>
+            {!loading && <i className="fas fa-times" onClick={() => dispatch(showModalChargeDBSet(false))}></i>}
           </div>
         </div>
         <h3>Cargar Base de datos</h3>
@@ -47,9 +49,15 @@ export const ModalChargeDB = () => {
             <input type="number" className="form-control" onChange={handleOnChange} max="20" min="1" />
           </div>
           <div className="col-3 d-flex align-items-end">
-            <button className="btn btn-primary" onClick={handleSubmit}>
-              Cargar
-            </button>
+            {loading ? (
+              <div className="w-100 d-flex justify-content-center mt-3">
+                <i class="spinnerLoading  fas fa-spinner fa-spin"></i>
+              </div>
+            ) : (
+              <button className="btn btn-primary" onClick={handleSubmit}>
+                Cargar
+              </button>
+            )}
           </div>
         </div>
       </Modal.Body>

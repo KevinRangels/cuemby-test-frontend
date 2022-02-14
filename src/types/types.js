@@ -6,6 +6,8 @@ export const types = {
   uiShowModalPlayer: '[UI] Show Modal Player',
   uiShowModalChargeDB: '[UI] Show Modal Charge DB',
 
+  settingDashboard: '[Settings] Get Data Dashboard',
+
   playersGetAll: '[Players] Get all',
   playerGetActive: '[Players] Get Single',
   playerSetFilter: '[Players] Set Filter',
